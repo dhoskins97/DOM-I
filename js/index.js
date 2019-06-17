@@ -57,6 +57,14 @@ navItem[3].textContent = siteContent["nav"]["nav-item-4"];
 navItem[4].textContent = siteContent["nav"]["nav-item-5"];
 navItem[5].textContent = siteContent["nav"]["nav-item-6"];
 
+const newNavItem = document.createElement("a");
+newNavItem.textContent = "Click Here!";
+nav.appendChild(newNavItem);
+
+const newerNavItem = document.createElement("a");
+newerNavItem.textContent = "Don't Click Here!";
+nav.prepend(newerNavItem);
+
 navItem.forEach(function(elem){
 elem.style.color = "green";
 });
@@ -92,3 +100,4 @@ pTag[6].textContent = siteContent["contact"]["phone"];
 pTag[7].textContent = siteContent["contact"]["email"];
 
 pTag[8].textContent = siteContent["footer"]["copyright"];
+
