@@ -39,4 +39,65 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const headerImage = document.getElementById("cta-img");
+headerImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const longImage = document.getElementById("middle-img");
+longImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const nav = document.querySelector("nav");
+
+const newNavItem = document.createElement("a");
+newNavItem.textContent = "Click Here!";
+nav.appendChild(newNavItem);
+
+const newerNavItem = document.createElement("a");
+newerNavItem.textContent = "Don't Click Here!";
+nav.prepend(newerNavItem);
+
+const navItem = document.querySelectorAll("a");
+
+navItem[1].textContent = siteContent["nav"]["nav-item-1"];
+navItem[2].textContent = siteContent["nav"]["nav-item-2"];
+navItem[3].textContent = siteContent["nav"]["nav-item-3"];
+navItem[4].textContent = siteContent["nav"]["nav-item-4"];
+navItem[5].textContent = siteContent["nav"]["nav-item-5"];
+navItem[6].textContent = siteContent["nav"]["nav-item-6"];
+
+navItem.forEach(function(elem){
+elem.style.color = "green";
+});
+
+const bigText = document.querySelector("h1");
+
+bigText.textContent = siteContent["cta"]["h1"];
+
+const buttonText = document.querySelector("button");
+buttonText.textContent = siteContent["cta"]["button"];
+
+const subHeader = document.querySelectorAll("h4");
+const pTag = document.querySelectorAll("p");
+
+subHeader[0].textContent = siteContent["main-content"]["features-h4"];
+pTag[0].textContent = siteContent["main-content"]["features-content"];
+
+subHeader[1].textContent = siteContent["main-content"]["about-h4"];
+pTag[1].textContent = siteContent["main-content"]["about-content"];
+
+subHeader[2].textContent = siteContent["main-content"]["services-h4"];
+pTag[2].textContent = siteContent["main-content"]["services-content"];
+
+subHeader[3].textContent = siteContent["main-content"]["product-h4"];
+pTag[3].textContent = siteContent["main-content"]["product-content"];
+
+subHeader[4].textContent = siteContent["main-content"]["vision-h4"];
+pTag[4].textContent = siteContent["main-content"]["vision-content"];
+
+subHeader[5].textContent = siteContent["contact"]["contact-h4"];
+pTag[5].textContent = siteContent["contact"]["address"];
+pTag[6].textContent = siteContent["contact"]["phone"];
+pTag[7].textContent = siteContent["contact"]["email"];
+
+pTag[8].textContent = siteContent["footer"]["copyright"];
